@@ -8,13 +8,19 @@ const App = () => {
         <>
             <div className="home-body">
                 <div className="brands">
-                    <FontAwesomeIcon icon={faEnvelope} />
-                    <FontAwesomeIcon icon={faGithub} />
-                    <FontAwesomeIcon icon={faLinkedin} />
+                    <FontAwesomeIcon className="icon fa-lg" icon={faEnvelope} />
+                    <FontAwesomeIcon className="icon fa-lg" icon={faGithub} />
+                    <FontAwesomeIcon className="icon fa-lg" icon={faLinkedin} />
                 </div>
-                <div className="brand">poncitions moon</div>
+                <div className="brand">
+                    <h1 className="brand-name">poncitions</h1>
+                    <img
+                        className="brand-logo"
+                        src={require('../images/moonlogo.jpg')}
+                    />
+                </div>
                 <div className="menu">
-                    <FontAwesomeIcon icon={faBars} />
+                    <FontAwesomeIcon className="menu-icon" icon={faBars} />
                 </div>
                 {/* <img src={require('../images/finaltree.jpg')} /> */}
             </div>

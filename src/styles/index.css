@@ -6,8 +6,40 @@ body {
     background-image: url('../images//finaltree.jpg');
     background-size: 400px 300px;
     background-repeat: no-repeat;
-    background-position: center -194%;
+    background-position: center -141%;
+    position: fixed;
 }
 
 .home-body {
+    display: flex;
+}
+
+.brands {
+    display: flex;
+    height: 93vh;
+    flex-direction: column;
+    margin: 2em;
+    justify-content: flex-end;
+}
+
+.icon {
+    margin-bottom: 1em;
+}
+
+.brand {
+    display: flex;
+    height: auto;
+    width: 500%;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-name {
+    font-size: 40px;
+}
+
+.brand-logo {
+    height: 20px;
+    margin-left: 1em;
+    padding-top: 8px;
 }
