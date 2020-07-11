@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bentham&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
 body {
     margin: 0;
-    font-family: 'Bentham', sans-serif;
+    font-family: 'Merriweather', sans-serif;
     background-image: url('../images//finaltree.jpg');
     background-size: 400px 300px;
     background-repeat: no-repeat;
@@ -11,35 +13,47 @@ body {
 }
 
 .home-body {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 14fr 5fr;
+    grid-template-rows: 100vh;
 }
 
 .brands {
+    /* background-color: rgba(255, 0, 0, 0.226); */
     display: flex;
-    height: 93vh;
-    flex-direction: column;
-    margin: 2em;
     justify-content: flex-end;
+    flex-direction: column;
 }
 
 .icon {
-    margin-bottom: 1em;
+    margin: 0 1em 1em 1.5em;
 }
 
 .brand {
     display: flex;
-    height: auto;
-    width: 500%;
     align-items: center;
     justify-content: center;
+    /* background-color: rgba(0, 255, 255, 0.301); */
 }
 
 .brand-name {
-    font-size: 40px;
+    font-size: 42px;
+    font-weight: bolder;
+    float: left;
 }
 
 .brand-logo {
-    height: 20px;
     margin-left: 1em;
-    padding-top: 8px;
+    margin-top: 0.8em;
+    height: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: rgba(0, 128, 0, 0.301); */
+}
+
+.menu-icon {
+    margin-top: 1em;
 }

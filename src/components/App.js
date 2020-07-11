@@ -20,9 +20,11 @@ const App = () => {
                     />
                 </div>
                 <div className="menu">
-                    <FontAwesomeIcon className="menu-icon" icon={faBars} />
+                    <FontAwesomeIcon
+                        className="menu-icon fa-lg"
+                        icon={faBars}
+                    />
                 </div>
-                {/* <img src={require('../images/finaltree.jpg')} /> */}
             </div>
         </>
     );
