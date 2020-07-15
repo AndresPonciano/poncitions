@@ -5,21 +5,20 @@
 body {
     margin: 0;
     font-family: 'Merriweather', sans-serif;
-    background-image: url('../images//finaltree.jpg');
-    background-size: 400px 300px;
-    background-repeat: no-repeat;
-    background-position: center -141%;
-    position: fixed;
+    /* background-image: url('../images//finaltree.jpg'); */
+    /* background-size: 400px 300px; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center -141%; */
+    /* position: fixed; */
 }
 
-.home-body {
+/* .home-body {
     display: grid;
     grid-template-columns: 1fr 14fr 5fr;
     grid-template-rows: 100vh;
 }
 
 .brands {
-    /* background-color: rgba(255, 0, 0, 0.226); */
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -33,7 +32,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: rgba(0, 255, 255, 0.301); */
 }
 
 .brand-name {
@@ -51,9 +49,8 @@ body {
 .menu {
     display: flex;
     justify-content: flex-end;
-    /* background-color: rgba(0, 128, 0, 0.301); */
 }
 
 .menu-icon {
     margin-top: 1em;
-}
+} */
