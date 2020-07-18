@@ -10,18 +10,19 @@ export const homeBody = css`
     background-position: center 101%;
     color: #080718;
     display: grid;
-    grid-template-columns: 1fr 14fr 5fr;
+    grid-template-columns: 1fr 15fr 6fr;
     grid-template-rows: 100vh;
 `;
 
 export const brands = css`
+    // background-color: lightblue;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
 `;
 
 export const icon = css`
-    margin: 0 1em 1em 1.5em;
+    margin: 0 1em 1.5em 1.5em;
 `;
 
 export const brand = css`
@@ -43,13 +44,12 @@ export const brandLogo = css`
 `;
 
 export const menu = css`
+    // background-color: lightgreen;
     display: flex;
     justify-content: flex-end;
 `;
 
 export const menuIcon = css`
-    margin-top: 1em;
-    &:hover {
-        color: red;
-    }
+    margin-top: 1.5em;
+    margin-right: 1.5em;
 `;
