@@ -1,15 +1,20 @@
 /**@jsx jsx */
 import { jsx, css } from '@emotion/core';
-import styled from '@emotion/styled';
+import img from '../images/finaltree.jpg';
 
 export const homeBody = css`
+    background-image: url(${img});
+    background-size: 400px 300px;
+    background-repeat: no-repeat;
+    position: fixed;
+    background-position: center 101%;
+    color: #080718;
     display: grid;
-    grid-template-columns: 1fr 14fr 1fr;
+    grid-template-columns: 1fr 14fr 5fr;
     grid-template-rows: 100vh;
 `;
 
 export const brands = css`
-    background-color: green;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -20,7 +25,6 @@ export const icon = css`
 `;
 
 export const brand = css`
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,11 +43,13 @@ export const brandLogo = css`
 `;
 
 export const menu = css`
-    background-color: blue;
     display: flex;
     justify-content: flex-end;
 `;
 
 export const menuIcon = css`
     margin-top: 1em;
+    &:hover {
+        color: red;
+    }
 `;

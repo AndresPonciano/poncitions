@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -14,10 +14,16 @@ import {
     menu,
     menuIcon,
 } from '../styles/frontStyles';
-const App = () => {
-    const [sidebar, setSidebar] = useState(false);
+import MenuModal from './MenuModal';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-    console.log(sidebar);
+const App = () => {
+    const modalState = useSelector((state) => state.modal);
+    console.log(modalState);
+
+    const dispatch = useDispatch();
+
     return (
         <div css={homeBody}>
             <div css={brands}>
@@ -35,14 +41,19 @@ const App = () => {
             </div>
             <div css={brand}>
                 <h1 css={brandName}>poncitions</h1>
-                <img css={brandLogo} src={require('../images/moonlogo.jpg')} />
+                <img
+                    css={brandLogo}
+                    src={require('../images/moonlogo.jpg')}
+                    alt="moon brand"
+                />
             </div>
             <div css={menu}>
+                <MenuModal />
                 <FontAwesomeIcon
                     className="fa-lg"
                     css={menuIcon}
                     icon={faBars}
-                    onClick={() => setSidebar(true)}
+                    onClick={() => dispatch({ type: 'SWITCH_MODAL' })}
                 />
             </div>
         </div>
