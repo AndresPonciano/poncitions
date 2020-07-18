@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
@@ -6,6 +7,8 @@ import {
     displayedModal,
     hiddenModal,
     closeButton,
+    links,
+    linkItem,
 } from '../styles/ModalStyles';
 import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,7 +27,20 @@ const MenuModal = () => {
                 css={closeButton}
                 onClick={() => dispatch({ type: 'SWITCH_MODAL' })}
             />
-            <p>poo</p>
+            <div css={links}>
+                <Link css={linkItem} to="/template">
+                    projects
+                </Link>
+                <Link css={linkItem} to="/template">
+                    skills
+                </Link>
+                <Link css={linkItem} to="/template">
+                    about
+                </Link>
+                <Link css={linkItem} to="/template">
+                    contact
+                </Link>
+            </div>
         </div>
     );
 };
