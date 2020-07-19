@@ -1,8 +1,8 @@
 /**@jsx jsx */
-import { jsx, css, keyframes } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 
 export const hiddenModal = css`
-    right: -100%;
+    right: -25%;
     height: 100vh;
     width: 350px;
     position: absolute;
