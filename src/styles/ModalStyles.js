@@ -2,26 +2,25 @@
 import { jsx, css, keyframes } from '@emotion/core';
 
 export const hiddenModal = css`
-    display: none;
-`;
-
-const slideIn = keyframes`
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 350px;
-    }
-`;
-
-export const displayedModal = css`
-    display: block;
+    right: -100%;
     height: 100vh;
     width: 350px;
     position: absolute;
     background-color: #080718;
     color: white;
-    animation: ${slideIn} 1s ease 0s;
+    transition-timing-function: ease;
+    transition: right 0.8s, opacity 0.4s;
+`;
+
+export const displayedModal = css`
+    right: 0;
+    height: 100vh;
+    width: 350px;
+    position: absolute;
+    background-color: #080718;
+    color: white;
+    transition-timing-function: ease;
+    transition: right 0.8s, opacity 0.4s;
 `;
 
 export const closeButton = css`
@@ -36,7 +35,6 @@ export const links = css`
     flex-direction: column;
     font-size: 21px;
     margin-top: 0.8em;
-    // padding: 1.5em 2.5em 0 0;
 `;
 
 export const linkItem = css`
@@ -46,10 +44,7 @@ export const linkItem = css`
     text-decoration: none;
     text-align: right;
     padding-right: 2em;
-    // border-top: 0.5px solid white;
     &:hover {
-        border-top: 0.5px solid white;
-        border-bottom: 0.5px solid white;
         background-color: #4c566a;
     }
 `;
