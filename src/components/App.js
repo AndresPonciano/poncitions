@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -19,7 +19,23 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
 const App = () => {
+    const ref = useRef();
     const modalState = useSelector((state) => state.modal);
+
+    useEffect(() => {
+        const onBodyClick = (event) => {
+            console.log('here', event.target);
+            if (!ref.current.contains(event.target)) {
+                dispatch({ type: 'FALSE_MODAL' });
+            }
+        };
+
+        document.body.addEventListener('click', onBodyClick);
+
+        return () => {
+            document.body.removeEventListener('click', onBodyClick);
+        };
+    }, []);
 
     const dispatch = useDispatch();
 
@@ -44,7 +60,7 @@ const App = () => {
                     alt="moon brand"
                 />
             </div>
-            <div css={menu}>
+            <div ref={ref} css={menu}>
                 <MenuModal />
                 <div
                     css={menuIcon}
