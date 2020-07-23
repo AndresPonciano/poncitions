@@ -24,7 +24,6 @@ const App = () => {
 
     useEffect(() => {
         const onBodyClick = (event) => {
-            console.log('here', event.target);
             if (!ref.current.contains(event.target)) {
                 dispatch({ type: 'FALSE_MODAL' });
             }

@@ -11,6 +11,21 @@ export const infoBody = css`
     background-color: #080718;
     color: white;
     display: grid;
-    grid-template-columns: 1fr 15fr 6fr;
+    width: 100vw;
+    grid-template-columns: 1fr 2fr 5fr;
     grid-template-rows: 100vh;
+`;
+
+export const infoTitle = css`
+    background-color: lightgreen;
+`;
+
+export const brandLogo = css`
+    margin-left: 1em;
+    margin-top: 0.8em;
+    height: 20px;
+`;
+
+export const infoContent = css`
+    background-color: lightblue;
 `;
