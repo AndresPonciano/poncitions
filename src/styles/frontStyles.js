@@ -15,14 +15,25 @@ export const homeBody = css`
 `;
 
 export const brands = css`
-    // background-color: lightblue;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
+    margin-bottom: 0.5em;
 `;
 
 export const icon = css`
-    margin: 0 1em 1.5em 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1em 1em 1.5em;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+        color: white;
+        background-color: #080718;
+    }
 `;
 
 export const brand = css`
@@ -44,12 +55,21 @@ export const brandLogo = css`
 `;
 
 export const menu = css`
-    // background-color: lightgreen;
     display: flex;
     justify-content: flex-end;
 `;
 
 export const menuIcon = css`
-    margin-top: 1.5em;
-    margin-right: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 1.5em 0 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+        color: white;
+        background-color: #080718;
+    }
 `;

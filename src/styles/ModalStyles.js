@@ -1,8 +1,9 @@
 /**@jsx jsx */
 import { jsx, css } from '@emotion/core';
 
+// change right percentage with media queries goddamn
 export const hiddenModal = css`
-    right: -25%;
+    right: -30%;
     height: 100vh;
     width: 350px;
     position: absolute;
@@ -24,10 +25,20 @@ export const displayedModal = css`
 `;
 
 export const closeButton = css`
-    margin-top: 1.5em;
-    margin-left: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 1em 1em 1.5em;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
     border: none;
     color: white;
+    cursor: pointer;
+    &:hover {
+        color: #080718;
+        background-color: white;
+    }
 `;
 
 export const links = css`

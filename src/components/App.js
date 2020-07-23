@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -20,24 +20,21 @@ import { useDispatch } from 'react-redux';
 
 const App = () => {
     const modalState = useSelector((state) => state.modal);
-    console.log(modalState);
 
     const dispatch = useDispatch();
 
     return (
         <div css={homeBody}>
             <div css={brands}>
-                <FontAwesomeIcon
-                    className="fa-lg"
-                    css={icon}
-                    icon={faEnvelope}
-                />
-                <FontAwesomeIcon className="fa-lg" css={icon} icon={faGithub} />
-                <FontAwesomeIcon
-                    className="fa-lg"
-                    css={icon}
-                    icon={faLinkedin}
-                />
+                <div css={icon}>
+                    <FontAwesomeIcon className="fa-lg" icon={faEnvelope} />
+                </div>
+                <div css={icon}>
+                    <FontAwesomeIcon className="fa-lg" icon={faGithub} />
+                </div>
+                <div css={icon}>
+                    <FontAwesomeIcon className="fa-lg" icon={faLinkedin} />
+                </div>
             </div>
             <div css={brand}>
                 <h1 css={brandName}>poncitions</h1>
@@ -49,12 +46,12 @@ const App = () => {
             </div>
             <div css={menu}>
                 <MenuModal />
-                <FontAwesomeIcon
-                    className="fa-lg"
+                <div
                     css={menuIcon}
-                    icon={faBars}
                     onClick={() => dispatch({ type: 'SWITCH_MODAL' })}
-                />
+                >
+                    <FontAwesomeIcon className="fa-lg" icon={faBars} />
+                </div>
             </div>
         </div>
     );

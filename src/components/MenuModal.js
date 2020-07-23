@@ -21,12 +21,12 @@ const MenuModal = () => {
 
     return (
         <div css={modalClass}>
-            <FontAwesomeIcon
-                className="fa-lg"
-                icon={faTimes}
+            <div
                 css={closeButton}
                 onClick={() => dispatch({ type: 'SWITCH_MODAL' })}
-            />
+            >
+                <FontAwesomeIcon className="fa-lg" icon={faTimes} />
+            </div>
             <div css={links}>
                 <Link css={linkItem} to="/template">
                     projects
