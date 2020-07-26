@@ -1,5 +1,6 @@
 /**@jsx jsx */
 import { jsx, css } from '@emotion/core';
+import styled from '@emotion/styled';
 import img from '../images/finaltreedark2.png';
 
 export const infoBody = css`
@@ -12,12 +13,12 @@ export const infoBody = css`
     color: white;
     display: grid;
     width: 100vw;
-    grid-template-columns: 1fr 2fr 5fr;
+    grid-template-columns: 1fr 4fr 7fr;
     grid-template-rows: 100vh;
 `;
 
-export const infoTitle = css`
-    background-color: lightgreen;
+export const backIcon = css`
+    margin: 2em 0 0 2em;
 `;
 
 export const brandLogo = css`
@@ -27,5 +28,38 @@ export const brandLogo = css`
 `;
 
 export const infoContent = css`
-    background-color: lightblue;
+    align-self: center;
+`;
+
+export const bars = css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const progressLabel = css`
+    width: 70%;
+    margin-bottom: 0.5em;
+`;
+
+export const progressBar = css`
+    border-radius: 5px;
+    height: 40px;
+    width: 70%;
+    background-color: white;
+    margin-bottom: 1em;
+`;
+
+export const progress = (props) => css`
+    line-height: 40px;
+    border-radius: 5px;
+    width: ${props.width};
+    height: 40px;
+    background-color: #7d97bd;
+    color: white;
+    text-align: center;
+`;
+
+export const ProgressContainer = styled.div`
+    ${progress};
 `;
