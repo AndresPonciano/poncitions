@@ -31,7 +31,7 @@ const MenuModal = () => {
                 <Link css={linkItem} to="/template">
                     projects
                 </Link>
-                <Link css={linkItem} to="/template">
+                <Link css={linkItem} to="/skills">
                     skills
                 </Link>
                 <Link css={linkItem} to="/template">
