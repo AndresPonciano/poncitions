@@ -28,7 +28,7 @@ const MenuModal = () => {
                 <FontAwesomeIcon className="fa-lg" icon={faTimes} />
             </div>
             <div css={links}>
-                <Link css={linkItem} to="/template">
+                <Link css={linkItem} to="/projects">
                     projects
                 </Link>
                 <Link css={linkItem} to="/skills">

@@ -19,6 +19,11 @@ export const infoBody = css`
 
 export const canvasStyle = css`
     position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    visibility: hidden;
+    opacity: 0;
 `;
 
 export const backIcon = css`
