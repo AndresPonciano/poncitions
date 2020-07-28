@@ -25,8 +25,9 @@ const Projects = () => {
     const starRef = useRef(null);
 
     useEffect(() => {
-        console.log('hi');
-        var width = 1600;
+        // function starsshine() {
+        console.log('is this running');
+        var width = 1500;
         var height = 800;
 
         var banner = document.querySelector('#banner');
@@ -63,18 +64,20 @@ const Projects = () => {
             eases.push(ease);
         }
 
-        window.addEventListener('load', onLoad);
+        // window.addEventListener('load', onLoad);
 
         function onLoad() {
+            console.log('in load');
             for (var i = 0; i < numStars; i++) {
                 stars.push(createStar());
             }
 
-            // document.body.removeChild(baseStar);
+            banner.removeChild(baseStar);
             banner.appendChild(frag);
         }
 
         function createStar() {
+            console.log('in create star');
             // var index = random(textures.length)|0;
             // var star = textures[index].cloneNode(true);
             var star = baseStar.cloneNode(true);
@@ -136,7 +139,13 @@ const Projects = () => {
             }
             return min + (max - min) * Math.random();
         }
-    }, []);
+
+        onLoad();
+        // }
+    }, [bannerRef, starRef]);
+    // useEffect(() => {
+    // starsshine();
+    // }, []);
 
     return (
         <div id="banner" css={infoBody} ref={bannerRef}>
