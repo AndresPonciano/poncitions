@@ -28,6 +28,18 @@ export const canvasStyle = css`
 
 export const backIcon = css`
     margin: 2em 0 0 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 0 1em 1em 1.5em;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+        color: #080718;
+        background-color: white;
+    }
 `;
 
 export const brandLogo = css`
