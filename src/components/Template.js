@@ -8,11 +8,6 @@ import {
     infoTitle,
     infoContent,
     brandLogo,
-    bars,
-    progressLabel,
-    progressBar,
-    progress,
-    ProgressContainer,
     backIcon,
 } from '../styles/TemplateStyle';
 
@@ -28,45 +23,14 @@ const Template = () => {
                 ></FontAwesomeIcon>
             </div>
             <div css={brand}>
-                <h1 css={brandName}>skills</h1>
+                <h1 css={brandName}>Template</h1>
                 <img
                     css={brandLogo}
                     src={require('../images/darkmoonlogo.png')}
                     alt="moon brand"
                 />
             </div>
-            <div css={infoContent}>
-                <div css={bars}>
-                    <label css={progressLabel}>React</label>
-                    <div css={progressBar}>
-                        <ProgressContainer width="60%">60%</ProgressContainer>
-                    </div>
-                    <label css={progressLabel}>Javascript</label>
-                    <div css={progressBar}>
-                        <ProgressContainer width="40%">40%</ProgressContainer>
-                    </div>
-                    <label css={progressLabel}>Python</label>
-                    <div css={progressBar}>
-                        <ProgressContainer width="50%">50%</ProgressContainer>
-                    </div>
-                    <label css={progressLabel}>C/C++</label>
-                    <div css={progressBar}>
-                        <ProgressContainer width="40%">40%</ProgressContainer>
-                    </div>
-                    <label css={progressLabel}>HTML</label>
-                    <div css={progressBar}>
-                        <ProgressContainer width="80%">80%</ProgressContainer>
-                    </div>
-                    <label css={progressLabel}>CSS (+ Bulma, Tailwind)</label>
-                    <div css={progressBar}>
-                        <ProgressContainer width="70%">70%</ProgressContainer>
-                    </div>
-                    <label css={progressLabel}>NoSQL</label>
-                    <div css={progressBar}>
-                        <ProgressContainer width="15%">15%</ProgressContainer>
-                    </div>
-                </div>
-            </div>
+            <div css={infoContent}>Template</div>
         </div>
     );
 };
