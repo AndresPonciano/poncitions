@@ -34,6 +34,9 @@ const MenuModal = () => {
                 <Link css={linkItem} to="/skills">
                     skills
                 </Link>
+                <Link css={linkItem} to="/skills">
+                    illustrations
+                </Link>
                 <Link css={linkItem} to="/about">
                     about
                 </Link>
