@@ -15,6 +15,8 @@ import {
     projectsContent,
     project,
     projectImage,
+    picDecoration,
+    imageContainer,
 } from '../styles/ProjectsStyles';
 
 import { brand, brandName } from '../styles/frontStyles';
@@ -54,10 +56,13 @@ const Projects = () => {
                         some side hobbies. It was built using React, Redux, CSS
                         emotion, Flex/Grid, and some GSAP Javascript.
                     </p>
-                    <img
-                        css={projectImage}
-                        src={require('../images/poncitions_ss.png')}
-                    />
+                    <div css={imageContainer}>
+                        <div css={picDecoration}></div>
+                        <img
+                            css={projectImage}
+                            src={require('../images/poncitions_ss.png')}
+                        />
+                    </div>
                 </div>
                 <div css={project}>
                     <h2>Job Groups</h2>
@@ -65,7 +70,7 @@ const Projects = () => {
                         A full stack application using the MERN stack. The
                         intention of the app is to allow people to communalize
                         their job searches by creating groups and share job
-                        postings between them.
+                        postings within them.
                     </p>
                     <img
                         css={projectImage}
