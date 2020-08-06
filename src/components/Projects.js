@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useReducer } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useHistory } from 'react-router-dom';
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import {
@@ -25,13 +26,14 @@ import useStars from '../modules/hooks/useStars';
 const Projects = () => {
     const bannerRef = useRef(null);
     const starRef = useRef(null);
+    let history = useHistory();
 
     // useStars();
 
     return (
         <div id="banner" css={infoBody} ref={bannerRef}>
             <div className="star" css={canvasStyle} ref={starRef}></div>
-            <div css={backIcon}>
+            <div css={backIcon} onClick={() => history.goBack()}>
                 <FontAwesomeIcon
                     className="fa-lg"
                     icon={faArrowLeft}
