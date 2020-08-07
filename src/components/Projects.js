@@ -59,7 +59,7 @@ const Projects = () => {
                         emotion, Flex/Grid, and some GSAP Javascript.
                     </p>
                     <div css={imageContainer}>
-                        <div css={picDecoration}></div>
+                        {/* <div css={picDecoration}></div> */}
                         <img
                             css={projectImage}
                             src={require('../images/poncitions_ss.png')}
