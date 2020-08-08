@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import {
@@ -10,7 +10,6 @@ import {
     links,
     linkItem,
 } from '../styles/ModalStyles';
-import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 

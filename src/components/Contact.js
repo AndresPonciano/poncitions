@@ -11,15 +11,18 @@ import {
     backIcon,
 } from '../styles/TemplateStyle';
 import { brand, brandName } from '../styles/frontStyles';
-import {
-    formContainer,
-    formInput,
-    formMessage,
-    sendButton,
-} from '../styles/ContactStyles';
+import EmailForm from './EmailForm';
+import { useSelector } from 'react-redux';
 
-const Skills = () => {
+const Contact = () => {
     let history = useHistory();
+    const state = useSelector((state) => state.form.emailForm);
+
+    const handleSubmit = () => {
+        console.log('im trying here');
+    };
+
+    console.log(state);
 
     return (
         <div css={infoBody}>
@@ -38,17 +41,10 @@ const Skills = () => {
                 />
             </div>
             <div css={infoContent}>
-                <form css={formContainer}>
-                    {/* <label>name</label> */}
-                    <input css={formInput} type="text" placeholder="name" />
-                    {/* <label>email</label> */}
-                    <input css={formInput} type="email" placeholder="email" />
-                    <textarea css={formMessage}></textarea>
-                    <button css={sendButton}>send</button>
-                </form>
+                <EmailForm handleSubmit={handleSubmit()} />
             </div>
         </div>
     );
 };
 
-export default Skills;
+export default Contact;
