@@ -6,6 +6,7 @@ import Skills from './Skills';
 import Projects from './Projects';
 import About from './About';
 import NotFound from './NotFound';
+import Contact from './Contact';
 
 function Router() {
     return (
@@ -17,6 +18,7 @@ function Router() {
                 <Route path="/skills" component={Skills}></Route>
                 {/* <Route path="illustrations" component={NotFound}></Route> */}
                 <Route path="/about" component={About}></Route>
+                <Route path="/contact" component={Contact}></Route>
                 <Route path="/404" component={NotFound}></Route>
                 <Route component={NotFound}></Route>
             </Switch>

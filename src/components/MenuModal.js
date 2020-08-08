@@ -40,7 +40,7 @@ const MenuModal = () => {
                 <Link css={linkItem} to="/about">
                     about
                 </Link>
-                <Link css={linkItem} to="/template">
+                <Link css={linkItem} to="/contact">
                     contact
                 </Link>
             </div>
