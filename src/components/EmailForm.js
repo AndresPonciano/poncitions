@@ -57,13 +57,13 @@ const EmailForm = (props) => {
             from_name: formValues.email,
             to_name: 'andres.ponciano123@gmail.com',
             subject: formValues.name,
-            message: formValues.message,
+            message_html: formValues.message,
         };
 
         send(
             'gmail',
             'template_zVfX0dn0',
-            formValues,
+            templateParameters,
             'user_s6RQHD3V2gVSWfotjTSVU'
         ).then(
             function (response) {
