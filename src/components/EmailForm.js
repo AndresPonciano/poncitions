@@ -10,6 +10,7 @@ import {
     errors,
     noError,
 } from '../styles/ContactStyles';
+import { send } from 'emailjs-com';
 
 const renderError = ({ error, touched }) => {
     if (touched && error) {
@@ -51,6 +52,27 @@ const renderMessage = ({ input, meta }) => {
 const EmailForm = (props) => {
     const onSubmit = (formValues) => {
         console.log('submit', formValues);
+        const template_id = 'template_id';
+        let templateParameters = {
+            from_name: formValues.email,
+            to_name: 'andres.ponciano123@gmail.com',
+            subject: formValues.name,
+            message: formValues.message,
+        };
+
+        send(
+            'gmail',
+            'template_zVfX0dn0',
+            formValues,
+            'user_s6RQHD3V2gVSWfotjTSVU'
+        ).then(
+            function (response) {
+                console.log('succes', response.status, response.text);
+            },
+            function (error) {
+                console.log('failed', error);
+            }
+        );
     };
 
     return (
