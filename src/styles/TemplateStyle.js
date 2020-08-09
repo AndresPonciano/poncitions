@@ -1,6 +1,5 @@
 /**@jsx jsx */
-import { jsx, css } from '@emotion/core';
-import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import img from '../images/finaltreedark2.png';
 
 export const infoBody = css`

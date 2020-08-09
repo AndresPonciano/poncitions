@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { RoughEase, Linear, TweenLite, TimelineMax } from 'gsap/all';
 
 const useStars = () => {

@@ -15,12 +15,12 @@ import {
     menuIcon,
 } from '../styles/frontStyles';
 import MenuModal from './MenuModal';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
 const App = () => {
     const ref = useRef();
-    const modalState = useSelector((state) => state.modal);
+    // const modalState = useSelector((state) => state.modal);
 
     useEffect(() => {
         const onBodyClick = (event) => {
@@ -39,36 +39,49 @@ const App = () => {
     const dispatch = useDispatch();
 
     return (
-        <div css={homeBody}>
-            <div css={brands}>
-                <div css={icon}>
-                    <FontAwesomeIcon className="fa-lg" icon={faEnvelope} />
-                </div>
-                <div css={icon}>
-                    <FontAwesomeIcon className="fa-lg" icon={faGithub} />
-                </div>
-                <div css={icon}>
-                    <FontAwesomeIcon className="fa-lg" icon={faLinkedin} />
+        <React.Fragment>
+            <div>
+                <div css={homeBody}>
+                    <div css={brands}>
+                        <div css={icon}>
+                            <FontAwesomeIcon
+                                className="fa-lg"
+                                icon={faEnvelope}
+                            />
+                        </div>
+                        <div css={icon}>
+                            <FontAwesomeIcon
+                                className="fa-lg"
+                                icon={faGithub}
+                            />
+                        </div>
+                        <div css={icon}>
+                            <FontAwesomeIcon
+                                className="fa-lg"
+                                icon={faLinkedin}
+                            />
+                        </div>
+                    </div>
+                    <div css={brand}>
+                        <h1 css={brandName}>poncitions</h1>
+                        <img
+                            css={brandLogo}
+                            src={require('../images/moonlogo.jpg')}
+                            alt="moon brand"
+                        />
+                    </div>
+                    <div ref={ref} css={menu}>
+                        <MenuModal />
+                        <div
+                            css={menuIcon}
+                            onClick={() => dispatch({ type: 'SWITCH_MODAL' })}
+                        >
+                            <FontAwesomeIcon className="fa-lg" icon={faBars} />
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div css={brand}>
-                <h1 css={brandName}>poncitions</h1>
-                <img
-                    css={brandLogo}
-                    src={require('../images/moonlogo.jpg')}
-                    alt="moon brand"
-                />
-            </div>
-            <div ref={ref} css={menu}>
-                <MenuModal />
-                <div
-                    css={menuIcon}
-                    onClick={() => dispatch({ type: 'SWITCH_MODAL' })}
-                >
-                    <FontAwesomeIcon className="fa-lg" icon={faBars} />
-                </div>
-            </div>
-        </div>
+        </React.Fragment>
     );
 };
 

@@ -1,5 +1,5 @@
 /**@jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 export const bars = css`

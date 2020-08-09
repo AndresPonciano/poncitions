@@ -1,5 +1,5 @@
 /**@jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css } from '@emotion/core';
 import img from '../images/finaltree.jpg';
 
 export const homeBody = css`

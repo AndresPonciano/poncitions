@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import {
     displayedModal,
     hiddenModal,
@@ -19,31 +19,33 @@ const MenuModal = () => {
     const dispatch = useDispatch();
 
     return (
-        <div css={modalClass}>
-            <div
-                css={closeButton}
-                onClick={() => dispatch({ type: 'SWITCH_MODAL' })}
-            >
-                <FontAwesomeIcon className="fa-lg" icon={faTimes} />
+        <React.Fragment>
+            <div css={modalClass}>
+                <div
+                    css={closeButton}
+                    onClick={() => dispatch({ type: 'SWITCH_MODAL' })}
+                >
+                    <FontAwesomeIcon className="fa-lg" icon={faTimes} />
+                </div>
+                <div css={links}>
+                    <Link css={linkItem} to="/projects">
+                        projects
+                    </Link>
+                    <Link css={linkItem} to="/skills">
+                        skills
+                    </Link>
+                    <Link css={linkItem} to="/illustrations">
+                        illustrations
+                    </Link>
+                    <Link css={linkItem} to="/about">
+                        about
+                    </Link>
+                    <Link css={linkItem} to="/contact">
+                        contact
+                    </Link>
+                </div>
             </div>
-            <div css={links}>
-                <Link css={linkItem} to="/projects">
-                    projects
-                </Link>
-                <Link css={linkItem} to="/skills">
-                    skills
-                </Link>
-                <Link css={linkItem} to="/illustrations">
-                    illustrations
-                </Link>
-                <Link css={linkItem} to="/about">
-                    about
-                </Link>
-                <Link css={linkItem} to="/contact">
-                    contact
-                </Link>
-            </div>
-        </div>
+        </React.Fragment>
     );
 };
 

@@ -1,6 +1,5 @@
 /**@jsx jsx */
-import { jsx, css } from '@emotion/core';
-import styled from '@emotion/styled/macro';
+import { css } from '@emotion/core';
 
 export const projectsContent = css`
     display: flex;

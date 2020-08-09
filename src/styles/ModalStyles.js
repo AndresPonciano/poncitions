@@ -1,5 +1,5 @@
 /**@jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css } from '@emotion/core';
 
 // change right percentage with media queries goddamn
 export const hiddenModal = css`
