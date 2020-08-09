@@ -7,44 +7,51 @@ import {
     formInput,
     formMessage,
     sendButton,
+    errors,
+    noError,
 } from '../styles/ContactStyles';
 
-const renderInput = ({ input, placeholder, type }) => {
-    console.log('pp', placeholder, type);
+const renderError = ({ error, touched }) => {
+    if (touched && error) {
+        return (
+            <div>
+                <p css={errors}>{error}</p>
+            </div>
+        );
+    } else {
+        return <div css={noError}></div>;
+    }
+};
+
+const renderInput = ({ input, placeholder, type, meta }) => {
+    console.log(meta);
     return (
-        <input
-            {...input}
-            css={formInput}
-            type={type}
-            placeholder={placeholder}
-        />
+        <React.Fragment>
+            <input
+                {...input}
+                css={formInput}
+                type={type}
+                placeholder={placeholder}
+            />
+            {/* <div>{meta.error}</div> */}
+            {renderError(meta)}
+        </React.Fragment>
     );
 };
 
-const renderMessage = ({ input }) => {
-    return <textarea {...input} css={formMessage} />;
+const renderMessage = ({ input, meta }) => {
+    return (
+        <React.Fragment>
+            <textarea {...input} css={formMessage} />
+            {renderError(meta)}
+        </React.Fragment>
+    );
 };
 
 const EmailForm = (props) => {
     const onSubmit = (formValues) => {
         console.log('submit', formValues);
     };
-
-    // const renderInput = ({ input, placeholder, type }) => {
-    //     console.log('pp', placeholder, type);
-    //     return (
-    //         <input
-    //             {...input}
-    //             css={formInput}
-    //             type={type}
-    //             placeholder={placeholder}
-    //         />
-    //     );
-    // };
-
-    // const renderMessage = ({ input }) => {
-    //     return <textarea {...input} css={formMessage} />;
-    // };
 
     return (
         <React.Fragment>
