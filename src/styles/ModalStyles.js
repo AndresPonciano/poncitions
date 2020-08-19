@@ -1,27 +1,22 @@
 /**@jsx jsx */
 import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 
 // change right percentage with media queries goddamn
-export const hiddenModal = css`
-    right: -30%;
-    height: 100vh;
-    width: 350px;
-    position: absolute;
-    background-color: #080718;
-    color: white;
-    transition-timing-function: ease;
-    transition: right 0.8s, opacity 0.4s;
-`;
 
-export const displayedModal = css`
+export const displayedModal = (props) => css`
     right: 0;
     height: 100vh;
-    width: 350px;
+    width: ${props.width};
     position: absolute;
     background-color: #080718;
     color: white;
     transition-timing-function: ease;
-    transition: right 0.8s, opacity 0.4s;
+    transition: 0.8s, opacity 0.4s;
+`;
+
+export const Modal = styled.div`
+    ${displayedModal}
 `;
 
 export const closeButton = css`

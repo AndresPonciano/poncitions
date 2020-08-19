@@ -52,7 +52,7 @@ const renderMessage = ({ input, meta }) => {
 const EmailForm = (props) => {
     const onSubmit = (formValues) => {
         console.log('submit', formValues);
-        const template_id = 'template_id';
+        // const template_id = 'template_id';
         let templateParameters = {
             from_name: formValues.email,
             to_name: 'andres.ponciano123@gmail.com',

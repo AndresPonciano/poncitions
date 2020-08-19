@@ -1,26 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import {
-    displayedModal,
-    hiddenModal,
-    closeButton,
-    links,
-    linkItem,
-} from '../styles/ModalStyles';
+import { closeButton, links, linkItem, Modal } from '../styles/ModalStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const MenuModal = () => {
+    const [modalWidth, setModalWidth] = useState('');
     const modalState = useSelector((state) => state.modal);
-    const modalClass = modalState.showModal ? displayedModal : hiddenModal;
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (modalState.showModal) {
+            setModalWidth('350px');
+        }
+
+        if (!modalState.showModal) {
+            setModalWidth('0px');
+        }
+    }, [modalState]);
 
     return (
         <React.Fragment>
-            <div css={modalClass}>
+            {/* <div css={displayedModal}> */}
+            <Modal width={modalWidth}>
                 <div
                     css={closeButton}
                     onClick={() => dispatch({ type: 'SWITCH_MODAL' })}
@@ -44,7 +49,8 @@ const MenuModal = () => {
                         contact
                     </Link>
                 </div>
-            </div>
+            </Modal>
+            {/* </div> */}
         </React.Fragment>
     );
 };
