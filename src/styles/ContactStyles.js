@@ -10,6 +10,8 @@ export const formContainer = css`
     @media (max-width: 580px) {
         height: 500%;
         margin-bottom: 5em;
+        margin-left: auto;
+        margin-right: auto;
     }
 `;
 
@@ -50,8 +52,6 @@ export const sendButton = css`
     }
 
     @media (max-width: 580px) {
-        height: 500%;
-        margin-bottom: 5em;
     }
 `;
 

@@ -29,6 +29,10 @@ export const progress = (props) => css`
     background-color: #7d97bd;
     color: white;
     text-align: center;
+
+    @media (max-width: 580px) {
+        margin-bottom: 4em;
+    }
 `;
 
 export const ProgressContainer = styled.div`

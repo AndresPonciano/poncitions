@@ -23,7 +23,7 @@ const Contact = () => {
 
     return (
         <React.Fragment>
-            <MainBody contentHeight="60%">
+            <MainBody contentHeight="110%">
                 {/* <div css={infoBody}> */}
                 <div css={backIcon} onClick={() => history.goBack()}>
                     <FontAwesomeIcon

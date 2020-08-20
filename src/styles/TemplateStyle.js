@@ -17,6 +17,7 @@ export const infoBody = (props) => css`
     grid-template-rows: 100vh;
 
     @media (max-width: 580px) {
+        height: 100vh;
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 20px 300px ${props.contentHeight};
