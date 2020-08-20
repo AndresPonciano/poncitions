@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import {
+    MainBody,
     infoBody,
     brandLogo,
     backIcon,
@@ -26,11 +27,12 @@ const Projects = () => {
     const starRef = useRef(null);
     let history = useHistory();
 
-    useStars();
+    // useStars();
 
     return (
         <React.Fragment>
-            <div id="banner" css={infoBody} ref={bannerRef}>
+            <MainBody contentHeight="135%">
+                {/* <div id="banner" css={infoBody} ref={bannerRef}> */}
                 <div className="star" css={canvasStyle} ref={starRef}></div>
                 <div css={backIcon} onClick={() => history.goBack()}>
                     <FontAwesomeIcon
@@ -97,7 +99,8 @@ const Projects = () => {
                         />
                     </div>
                 </div>
-            </div>
+                {/* </div> */}
+            </MainBody>
         </React.Fragment>
     );
 };

@@ -10,6 +10,12 @@ export const descriptionContainer = css`
     p {
         line-height: 1.6;
     }
+
+    @media (max-width: 580px) {
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `;
 
 export const myPicture = css`

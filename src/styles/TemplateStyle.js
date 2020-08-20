@@ -1,8 +1,9 @@
 /**@jsx jsx */
 import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 import img from '../images/finaltreedark2.png';
 
-export const infoBody = css`
+export const infoBody = (props) => css`
     background-image: url(${img});
     background-size: 400px 300px;
     background-repeat: no-repeat;
@@ -14,6 +15,23 @@ export const infoBody = css`
     width: 100vw;
     grid-template-columns: 1fr 4fr 7fr;
     grid-template-rows: 100vh;
+
+    @media (max-width: 580px) {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 20px 300px ${props.contentHeight};
+
+        // grid-template-rows: 20px 300px 110%;
+        //135 projects
+        //110 skills add margin bottom
+        //about: change height of description
+        //110 contact: center things
+        overflow-y: scroll;
+    }
+`;
+
+export const MainBody = styled.div`
+    ${infoBody}
 `;
 
 export const canvasStyle = css`

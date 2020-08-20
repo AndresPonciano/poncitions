@@ -6,6 +6,11 @@ export const formContainer = css`
     flex-direction: column;
     // background-color: lightblue;
     width: 80%;
+
+    @media (max-width: 580px) {
+        height: 500%;
+        margin-bottom: 5em;
+    }
 `;
 
 export const formInput = css`
@@ -42,6 +47,11 @@ export const sendButton = css`
     &:hover {
         border: 1px solid #7d97bd;
         background-color: #080718;
+    }
+
+    @media (max-width: 580px) {
+        height: 500%;
+        margin-bottom: 5em;
     }
 `;
 

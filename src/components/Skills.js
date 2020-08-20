@@ -9,6 +9,7 @@ import {
     infoContent,
     brandLogo,
     backIcon,
+    MainBody,
 } from '../styles/TemplateStyle';
 import {
     bars,
@@ -23,7 +24,8 @@ const Skills = () => {
 
     return (
         <React.Fragment>
-            <div css={infoBody}>
+            <MainBody contentHeight="110%">
+                {/* <div css={infoBody}> */}
                 <div css={backIcon} onClick={() => history.goBack()}>
                     <FontAwesomeIcon
                         className="fa-lg"
@@ -74,7 +76,8 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+                {/* </div> */}
+            </MainBody>
         </React.Fragment>
     );
 };

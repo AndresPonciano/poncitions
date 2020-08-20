@@ -9,6 +9,7 @@ import {
     infoContent,
     brandLogo,
     backIcon,
+    MainBody,
 } from '../styles/TemplateStyle';
 import { brand, brandName } from '../styles/frontStyles';
 import EmailForm from './EmailForm';
@@ -22,7 +23,8 @@ const Contact = () => {
 
     return (
         <React.Fragment>
-            <div css={infoBody}>
+            <MainBody contentHeight="60%">
+                {/* <div css={infoBody}> */}
                 <div css={backIcon} onClick={() => history.goBack()}>
                     <FontAwesomeIcon
                         className="fa-lg"
@@ -40,7 +42,8 @@ const Contact = () => {
                 <div css={infoContent}>
                     <EmailForm />
                 </div>
-            </div>
+                {/* </div> */}
+            </MainBody>
         </React.Fragment>
     );
 };

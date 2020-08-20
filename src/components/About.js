@@ -9,6 +9,7 @@ import {
     infoContent,
     brandLogo,
     backIcon,
+    MainBody,
 } from '../styles/TemplateStyle';
 
 import { descriptionContainer, myPicture } from '../styles/AboutStyles';
@@ -20,7 +21,8 @@ const About = () => {
 
     return (
         <React.Fragment>
-            <div css={infoBody}>
+            <MainBody contentHeight="70%">
+                {/* <div css={infoBody}> */}
                 <div css={backIcon} onClick={() => history.goBack()}>
                     <FontAwesomeIcon
                         className="fa-lg"
@@ -54,7 +56,8 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-            </div>
+                {/* </div> */}
+            </MainBody>
         </React.Fragment>
     );
 };
