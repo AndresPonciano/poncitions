@@ -21,12 +21,6 @@ export const infoBody = (props) => css`
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 20px 300px ${props.contentHeight};
-
-        // grid-template-rows: 20px 300px 110%;
-        //135 projects
-        //110 skills add margin bottom
-        //about: change height of description
-        //110 contact: center things
         overflow-y: scroll;
     }
 `;
