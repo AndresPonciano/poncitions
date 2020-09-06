@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/poncitions/static/css/main.2b8fb396.chunk.css",
+    "main.js": "/poncitions/static/js/main.211a3219.chunk.js",
+    "main.js.map": "/poncitions/static/js/main.211a3219.chunk.js.map",
+    "runtime-main.js": "/poncitions/static/js/runtime-main.e6e5e5b8.js",
+    "runtime-main.js.map": "/poncitions/static/js/runtime-main.e6e5e5b8.js.map",
+    "static/js/2.68abf030.chunk.js": "/poncitions/static/js/2.68abf030.chunk.js",
+    "static/js/2.68abf030.chunk.js.map": "/poncitions/static/js/2.68abf030.chunk.js.map",
+    "index.html": "/poncitions/index.html",
+    "precache-manifest.d83df790c465cceb9df825a183021532.js": "/poncitions/precache-manifest.d83df790c465cceb9df825a183021532.js",
+    "service-worker.js": "/poncitions/service-worker.js",
+    "static/css/main.2b8fb396.chunk.css.map": "/poncitions/static/css/main.2b8fb396.chunk.css.map",
+    "static/js/2.68abf030.chunk.js.LICENSE.txt": "/poncitions/static/js/2.68abf030.chunk.js.LICENSE.txt",
+    "static/media/finaltree.jpg": "/poncitions/static/media/finaltree.8eb197c0.jpg",
+    "static/media/finaltreedark2.png": "/poncitions/static/media/finaltreedark2.b56f17bd.png",
+    "static/media/jobgroups_ss.png": "/poncitions/static/media/jobgroups_ss.8b260ca7.png",
+    "static/media/miniyoutube_ss.png": "/poncitions/static/media/miniyoutube_ss.211ef7c8.png",
+    "static/media/myface.png": "/poncitions/static/media/myface.360bb96a.png",
+    "static/media/nothing_yet.png": "/poncitions/static/media/nothing_yet.ed115406.png",
+    "static/media/poncitions_ss.png": "/poncitions/static/media/poncitions_ss.e57cf025.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6e5e5b8.js",
+    "static/js/2.68abf030.chunk.js",
+    "static/css/main.2b8fb396.chunk.css",
+    "static/js/main.211a3219.chunk.js"
+  ]
+}
