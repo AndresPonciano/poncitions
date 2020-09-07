@@ -1,28 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import {
-    infoBody,
     infoContent,
     brandLogo,
     backIcon,
     MainBody,
+    canvasStyle,
 } from '../styles/TemplateStyle';
 
 import { descriptionContainer, myPicture } from '../styles/AboutStyles';
-
+import useStars from '../modules/hooks/useStars';
 import { brand } from '../styles/frontStyles';
 
 const About = () => {
+    const bannerRef = useRef(null);
+    const starRef = useRef(null);
     let history = useHistory();
+
+    useStars();
 
     return (
         <React.Fragment>
-            <MainBody contentHeight="70%">
+            <MainBody id="banner" ref={bannerRef} contentHeight="70%">
                 {/* <div css={infoBody}> */}
+                <div className="star" css={canvasStyle} ref={starRef}></div>
+
                 <div css={backIcon} onClick={() => history.goBack()}>
                     <FontAwesomeIcon
                         className="fa-lg"

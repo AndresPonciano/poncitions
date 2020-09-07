@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import {
-    infoBody,
     infoContent,
     brandLogo,
     backIcon,
     MainBody,
+    canvasStyle,
 } from '../styles/TemplateStyle';
 import {
     bars,
@@ -18,14 +18,20 @@ import {
     ProgressContainer,
 } from '../styles/SkillsStyles';
 import { brand, brandName } from '../styles/frontStyles';
+import useStars from '../modules/hooks/useStars';
 
 const Skills = () => {
+    const bannerRef = useRef(null);
+    const starRef = useRef(null);
     let history = useHistory();
+
+    useStars();
 
     return (
         <React.Fragment>
-            <MainBody contentHeight="110%">
+            <MainBody id="banner" ref={bannerRef} contentHeight="110%">
                 {/* <div css={infoBody}> */}
+                <div className="star" css={canvasStyle} ref={starRef}></div>
                 <div css={backIcon} onClick={() => history.goBack()}>
                     <FontAwesomeIcon
                         className="fa-lg"

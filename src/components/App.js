@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import {
     homeBody,
     brands,
@@ -17,10 +17,12 @@ import {
 import MenuModal from './MenuModal';
 // import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const App = () => {
     const ref = useRef();
     // const modalState = useSelector((state) => state.modal);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const onBodyClick = (event) => {
@@ -34,33 +36,41 @@ const App = () => {
         return () => {
             document.body.removeEventListener('click', onBodyClick);
         };
-    }, []);
-
-    const dispatch = useDispatch();
+    }, [dispatch]);
 
     return (
         <React.Fragment>
             <div>
                 <div css={homeBody}>
                     <div css={brands}>
-                        <div css={icon}>
+                        <Link css={icon} to="/contact">
                             <FontAwesomeIcon
                                 className="fa-lg"
                                 icon={faEnvelope}
                             />
-                        </div>
-                        <div css={icon}>
+                        </Link>
+                        <a
+                            css={icon}
+                            href="https://github.com/AndresPonciano"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <FontAwesomeIcon
                                 className="fa-lg"
                                 icon={faGithub}
                             />
-                        </div>
-                        <div css={icon}>
+                        </a>
+                        <a
+                            css={icon}
+                            href="https://linkedin.com/in/andresponciano"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <FontAwesomeIcon
                                 className="fa-lg"
                                 icon={faLinkedin}
                             />
-                        </div>
+                        </a>
                     </div>
                     <div css={brand}>
                         <h1 css={brandName}>poncitions</h1>

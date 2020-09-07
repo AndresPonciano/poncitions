@@ -6,7 +6,6 @@ import { useHistory } from 'react-router-dom';
 import { jsx } from '@emotion/core';
 import {
     MainBody,
-    infoBody,
     brandLogo,
     backIcon,
     canvasStyle,
@@ -27,11 +26,11 @@ const Projects = () => {
     const starRef = useRef(null);
     let history = useHistory();
 
-    // useStars();
+    useStars();
 
     return (
         <React.Fragment>
-            <MainBody contentHeight="135%">
+            <MainBody id="banner" ref={bannerRef} contentHeight="135%">
                 {/* <div id="banner" css={infoBody} ref={bannerRef}> */}
                 <div className="star" css={canvasStyle} ref={starRef}></div>
                 <div css={backIcon} onClick={() => history.goBack()}>

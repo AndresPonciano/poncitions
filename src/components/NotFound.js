@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import {
     notImage,
     notIcon,
@@ -27,6 +27,7 @@ const NotFound = () => {
                     <img
                         css={notImage}
                         src={require('../images/nothing_yet.png')}
+                        alt="mountain when nothing is found"
                     />
                     <h1>Nothing to see here...yet</h1>
                 </div>

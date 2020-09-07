@@ -4,27 +4,30 @@ import { RoughEase, Linear, TweenLite, TimelineMax } from 'gsap/all';
 const useStars = () => {
     useEffect(() => {
         // function starsshine() {
-        console.log('is this running');
+        // console.log('is this running');
         var width = 1500;
         var height = 800;
 
         var banner = document.querySelector('#banner');
         var baseStar = document.querySelector('.star');
-        console.log('basestar is', baseStar);
+        // console.log('basestar is', baseStar);
 
         var frag = document.createDocumentFragment();
 
         var appearMin = 0.3;
         var appearMax = 0.8;
 
-        var delayMin = 2;
-        var delayMax = 6;
+        // var delayMin = 2;
+        // var delayMax = 6;
+        var delayMin = 4;
+        var delayMax = 8;
 
         var durationMin = 0.3;
         var durationMax = 1;
 
         var numAnimations = 50;
-        var numStars = 300;
+        // var numStars = 300;
+        var numStars = 200;
 
         var stars = [];
         var eases = [];
@@ -33,7 +36,8 @@ const useStars = () => {
             var ease = new RoughEase({
                 template: Linear.easeNone,
                 strength: random(1, 3),
-                points: Math.floor(random(50, 200)),
+                // points: Math.floor(random(50, 200)),
+                points: Math.floor(random(50, 100)),
                 taper: 'both',
                 randomize: true,
                 clamp: true,
@@ -45,7 +49,7 @@ const useStars = () => {
         // window.addEventListener('load', onLoad);
 
         function onLoad() {
-            console.log('in load');
+            // console.log('in load');
             for (var i = 0; i < numStars; i++) {
                 stars.push(createStar());
             }
@@ -55,7 +59,7 @@ const useStars = () => {
         }
 
         function createStar() {
-            console.log('in create star');
+            // console.log('in create star');
             // var index = random(textures.length)|0;
             // var star = textures[index].cloneNode(true);
             var star = baseStar.cloneNode(true);

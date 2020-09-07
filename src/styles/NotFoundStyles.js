@@ -10,15 +10,21 @@ export const notBody = css`
 `;
 
 export const notImageContainer = css`
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
     margin-bottom: 4em;
-    // background-color: lightblue;
     align-self: center;
     justify-self: center;
+
+    h1 {
+        align-self: center;
+        font-size: 26px;
+    }
 `;
 
 export const notImage = css`
-    height: 300px;
+    height: 270px;
 `;
 
 export const notIcon = css`
