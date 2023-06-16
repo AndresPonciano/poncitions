@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 
-const About = () => {
+const About = forwardRef<HTMLDivElement>(({ }, ref) => {
     return (
-        <div className='flex flex-col'>
+        <div ref={ref} className='flex flex-col'>
             <h1 className='text-2xl font-bold'>Hello World!</h1>
             <div className='border '/>
-            <p>
-                My name's Andres Ponciano. I enjoy solving problems, writing neat and functional code, and making things pleasant to the eye and brain.
+            <p className='my-2'>
+                My name's Andres Ponciano and I'm a 2x alumni from Florida State University with a Bachelor's and Master's in Computer Science. 
+                I enjoy solving problems, writing neat and functional code, and creating things that are pleasant to the eye.
             </p>
-            <div>i will make an image for here</div>
+
+            <img className='self-center w-1/2 h-1/2 p-1' src={require("../images/nothing_yet.png")}/>
         </div>
     )
-};
+});
 
 export default About;

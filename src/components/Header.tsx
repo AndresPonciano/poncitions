@@ -1,11 +1,11 @@
 import React from 'react';
-
+const logo = require("../images/newtree.svg") as string;
 
 const Header = () => {
     return (
         <header className='flex'>
             <img className='w-1/3 border-2 p-1 rounded-full' src={require("../images/myface.png")}/>
-            <h1 className='text-center w-2/3 text-4xl font-bold self-end'>Andres Ponciano</h1>
+            <h1 className='text-center w-2/3 text-4xl font-bold self-start'>Andres Ponciano</h1>
         </header>
     )
     };
