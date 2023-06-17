@@ -55,15 +55,15 @@ const App = () => {
     
     return (
         // TODO: delete css-select from package
-        <div className='flex h-screen'>
-            <div className='flex flex-col justify-content-center gap-y-12 bg-dark text-light w-1/3 p-12 overflow-hidden'
+        <div className='flex flex-col md:flex-row md:h-screen'>
+            <div className='flex flex-col fixed md:static justify-content-center gap-y-12 bg-dark text-light md:w-1/3 p-12 overflow-hidden'
             >
                 <Header />
                 <NavMenu executeScroll={executeScroll} />
                 <Footer />
                 <Test />
             </div>
-            <div className='bg-light flex place-content-center w-2/3 text-dark overflow-scroll'>
+            <div className='bg-light flex place-content-center md:w-2/3 text-dark overflow-scroll'>
                 <div className='flex flex-col gap-24 w-3/4 my-12'>
                     <About ref={aboutRef} />
                     <Experience ref={experienceRef} />

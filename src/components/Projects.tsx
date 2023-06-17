@@ -10,25 +10,28 @@ import Typography from '@mui/material/Typography';
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  border: `1px solid`,
-  '&:not(:last-child)': {
-    borderBottom: 2,
-  },
-  '&:before': {
-    display: 'none',
-  },
+  backgroundColor: "#F5F9E9",
+  borderRadius: "0.25rem",
+  color: "#F5F9E9",
+  // '&:not(:last-child)': {
+  //   borderBottom: 2,
+  // },
+  // '&:before': {
+  //   display: 'none',
+  // },
 }));
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
   <MuiAccordionSummary
-    expandIcon={<FontAwesomeIcon className='h-4' icon={faChevronRight} />}
+    expandIcon={<FontAwesomeIcon className='h-4 text-gray hover:text-sage' icon={faChevronRight} />}
     {...props}
   />
 ))(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === 'dark'
-      ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(0, 0, 0, .03)',
+  backgroundColor: "#080718",
+  // backgroundColor:
+  //   theme.palette.mode === 'dark'
+  //     ? 'rgba(255, 255, 255, .05)'
+  //     : 'rgba(0, 0, 0, .03)',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
@@ -40,7 +43,8 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: '1px solid',
+  // border: '1px solid',
+  color: "#080718", 
 }));
 
 const Projects = React.forwardRef<HTMLDivElement>(({}, ref) => {
@@ -54,13 +58,13 @@ const Projects = React.forwardRef<HTMLDivElement>(({}, ref) => {
   return (
     <div ref={ref} className='flex flex-col'>
         <h1 className='text-2xl font-bold'>Projects</h1>
-        <div className='border'/>
+        {/* <div className='border'/> */}
 
         <div className='self-center mt-2'>
             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
 
                 <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                    <Typography>Google Scholar IO - indexed data in ElasticSearch and made it searchable in a NextJS website</Typography>
+                    <Typography> <span className='font-bold italic'> Google Scholar IO </span> - indexed data in ElasticSearch and made it searchable in a NextJS website</Typography>
                 </AccordionSummary>
 
                 <AccordionDetails>
