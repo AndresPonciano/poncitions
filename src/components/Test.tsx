@@ -2,7 +2,7 @@ import React from 'react';
 
 const Test = () => {
     return (
-        <div className='pointer-events-none h-auto overflow-hidden absolute w-full -left-[45rem] top-36 bottom-0'>
+        <div className='pointer-events-none h-auto overflow-hidden absolute w-full -left-[45rem] bottom-0'>
     <svg
       width={1290}
       height={758}

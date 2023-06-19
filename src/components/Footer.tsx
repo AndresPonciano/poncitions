@@ -8,16 +8,22 @@ import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 const Footer = () => {
     return (
         <div className='mt-auto'>
-            <h1 className='mb-2 text-md italic'>Contact me!</h1>
+            <h1 className='hidden md:block mb-2 text-md italic'>Contact me!</h1>
             <nav className='flex gap-x-6 list-none'>
-                <li className='hover:text-sage' onClick={() => console.log("LINKEDIN!!!!")}>
-                    <FontAwesomeIcon className='h-5' icon={faLinkedin as IconProp} />
+                <li className='hover:text-sage'>
+                    <a href='https://www.linkedin.com/in/andresponciano/' target='_blank'>
+                        <FontAwesomeIcon className='h-5' icon={faLinkedin as IconProp} />
+                    </a>
                 </li>
                 <li className='hover:text-sage'>
-                    <FontAwesomeIcon className='h-5' icon={faGithubAlt as IconProp} />
+                    <a href='https://github.com/AndresPonciano' target='_blank'>
+                        <FontAwesomeIcon className='h-5' icon={faGithubAlt as IconProp} />
+                    </a>
                 </li>
                 <li className='hover:text-sage'>
-                    <FontAwesomeIcon className='h-5' icon={faEnvelope as IconProp} />
+                    <a href='mailto:andres.ponciano123@gmail.com'>
+                        <FontAwesomeIcon className='h-5' icon={faEnvelope as IconProp} />
+                    </a>
                 </li>
                 <li>
                 </li>

@@ -8,6 +8,8 @@ import Experience from './Experience';
 import Test from './Test';
 import Projects from './Projects';
 import createTheme from '@mui/material/styles/createTheme';
+import More from './More';
+import OtherFooter from './OtherFooter';
   
 declare module "@mui/material/styles" {
     interface CommonColors {
@@ -33,6 +35,7 @@ const App = () => {
     const aboutRef = useRef<HTMLDivElement>(null);
     const experienceRef = useRef<HTMLDivElement>(null);
     const projectsRef = useRef<HTMLDivElement>(null);
+    const moreRef = useRef<HTMLDivElement>(null);
 
     const executeScroll = ( refString: String ) => {
         if(refString === 'About') {
@@ -50,24 +53,31 @@ const App = () => {
                 behavior: "smooth", 
                 block: 'center',
             });       
+        } else if (refString === 'More') {
+            moreRef.current?.scrollIntoView({ 
+                behavior: "smooth", 
+                block: 'center',
+            });       
         }
     }
     
     return (
         // TODO: delete css-select from package
         <div className='flex flex-col md:flex-row md:h-screen'>
-            <div className='flex flex-col fixed md:static justify-content-center gap-y-12 bg-dark text-light md:w-1/3 p-12 overflow-hidden'
+            <div className='z-10 flex flex-col fixed h-1/3 md:h-full md:static justify-content-center gap-y-4 md:gap-y-12 bg-dark text-light md:w-1/3 p-12 overflow-hidden'
             >
                 <Header />
                 <NavMenu executeScroll={executeScroll} />
                 <Footer />
                 <Test />
             </div>
-            <div className='bg-light flex place-content-center md:w-2/3 text-dark overflow-scroll'>
-                <div className='flex flex-col gap-24 w-3/4 my-12'>
+            <div className='flex flex-row justify-center bg-light mt-[15rem] md:mt-0 md:h-full md:w-2/3 text-dark overflow-scroll'>
+                <div className='flex flex-col justify-content-center gap-24 w-3/4 mt-24 md:mt-12'>
                     <About ref={aboutRef} />
                     <Experience ref={experienceRef} />
                     <Projects ref={projectsRef} />
+                    <More ref={moreRef} />
+                    <OtherFooter />
                 </div>
             </div>
         </div>
